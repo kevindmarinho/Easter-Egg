@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281C122E29B186E800809FB3 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 281C122D29B186E800809FB3 /* FocusEntity */; };
+		281C123329B1880E00809FB3 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C123229B1880E00809FB3 /* ARView.swift */; };
+		281C123529B18BC000809FB3 /* ARViewCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C123429B18BC000809FB3 /* ARViewCoodinator.swift */; };
+		281C123729B18D3200809FB3 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C123629B18D3200809FB3 /* GameView.swift */; };
+		281C123B29B18F1200809FB3 /* Easter_Egg.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 281C123A29B18F1200809FB3 /* Easter_Egg.usdz */; };
 		285BC6EB2989A22000865DD2 /* EasterEggApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285BC6EA2989A22000865DD2 /* EasterEggApp.swift */; };
 		285BC6ED2989A22000865DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285BC6EC2989A22000865DD2 /* ContentView.swift */; };
 		285BC6EF2989A22100865DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285BC6EE2989A22100865DD2 /* Assets.xcassets */; };
@@ -14,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		281C123229B1880E00809FB3 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		281C123429B18BC000809FB3 /* ARViewCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewCoodinator.swift; sourceTree = "<group>"; };
+		281C123629B18D3200809FB3 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		281C123A29B18F1200809FB3 /* Easter_Egg.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Easter_Egg.usdz; sourceTree = "<group>"; };
 		285BC6E72989A22000865DD2 /* EasterEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasterEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		285BC6EA2989A22000865DD2 /* EasterEggApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasterEggApp.swift; sourceTree = "<group>"; };
 		285BC6EC2989A22000865DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,12 +35,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				281C122E29B186E800809FB3 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		281C122F29B186FD00809FB3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				281C123029B1872300809FB3 /* GameView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		281C123029B1872300809FB3 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				281C123129B1873700809FB3 /* Components */,
+				281C123629B18D3200809FB3 /* GameView.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		281C123129B1873700809FB3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				281C123229B1880E00809FB3 /* ARView.swift */,
+				281C123429B18BC000809FB3 /* ARViewCoodinator.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		281C123829B18DFC00809FB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				281C123929B18E1F00809FB3 /* 3DModels */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		281C123929B18E1F00809FB3 /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				281C123A29B18F1200809FB3 /* Easter_Egg.usdz */,
+			);
+			path = 3DModels;
+			sourceTree = "<group>";
+		};
 		285BC6DE2989A22000865DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +103,8 @@
 		285BC6E92989A22000865DD2 /* EasterEgg */ = {
 			isa = PBXGroup;
 			children = (
+				281C122F29B186FD00809FB3 /* Scenes */,
+				281C123829B18DFC00809FB3 /* Resources */,
 				285BC6EA2989A22000865DD2 /* EasterEggApp.swift */,
 				285BC6EC2989A22000865DD2 /* ContentView.swift */,
 				285BC6EE2989A22100865DD2 /* Assets.xcassets */,
@@ -83,6 +137,9 @@
 			dependencies = (
 			);
 			name = EasterEgg;
+			packageProductDependencies = (
+				281C122D29B186E800809FB3 /* FocusEntity */,
+			);
 			productName = EasterEgg;
 			productReference = 285BC6E72989A22000865DD2 /* EasterEgg.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 285BC6DE2989A22000865DD2;
+			packageReferences = (
+				281C122C29B186E700809FB3 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 285BC6E82989A22000865DD2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +187,7 @@
 			files = (
 				285BC6F22989A22100865DD2 /* Preview Assets.xcassets in Resources */,
 				285BC6EF2989A22100865DD2 /* Assets.xcassets in Resources */,
+				281C123B29B18F1200809FB3 /* Easter_Egg.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				285BC6ED2989A22000865DD2 /* ContentView.swift in Sources */,
+				281C123529B18BC000809FB3 /* ARViewCoodinator.swift in Sources */,
 				285BC6EB2989A22000865DD2 /* EasterEggApp.swift in Sources */,
+				281C123329B1880E00809FB3 /* ARView.swift in Sources */,
+				281C123729B18D3200809FB3 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +334,7 @@
 				DEVELOPMENT_TEAM = XJ57BXJG95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Authorization to use your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +364,7 @@
 				DEVELOPMENT_TEAM = XJ57BXJG95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Authorization to use your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		281C122C29B186E700809FB3 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		281C122D29B186E800809FB3 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 281C122C29B186E700809FB3 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 285BC6DF2989A22000865DD2 /* Project object */;
 }
